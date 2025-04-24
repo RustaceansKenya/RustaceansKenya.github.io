@@ -74,6 +74,7 @@ body {
     border: 2px solid #C03A31;
     border-radius: 30px;
     padding: 10px 15px;
+    min-width: 50px;
 
 }
 
@@ -120,4 +121,11 @@ body {
 
 .bg-color-tertiary {
     background-color: #FFFFFF;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+.min-width-100 {
+    width: 100px;
 }

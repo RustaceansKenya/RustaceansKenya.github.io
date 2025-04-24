@@ -1,9 +1,13 @@
+img {
+    max-width: 100% !important;
+}
+
 #hero {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100vw !important;
-    height: 100vh !important;
+    min-height: 100vh !important;
     text-align: center !important;
 }
 
@@ -11,16 +15,31 @@
     #hero {
         background-image: url('/images/hero-small.svg');
     }
+
+    #logo {
+        width: 50%;
+    }
+
+    .global-font-size {
+        font-size: 50%;
+    }
 }
 
 @media only screen and (min-width:992px) {
     #hero {
         background-image: url('/images/hero-large.svg');
     }
+    #logo {
+        width: 20%;
+    }
+
+    .global-font-size {
+        font-size: 150%;
+    }
 }
 
 .height-100vh {
-    height: 100vh !important;
+    min-height: 100vh !important;
 }
 
 .font-brizel-regular {
@@ -29,6 +48,12 @@
 
 .font-poppins-regular {
     font-family: "poppinsregular", "sans-serif";
+}
+
+
+
+.font-size-50 {
+    font-size: 50%;
 }
 
 .font-size-400 {

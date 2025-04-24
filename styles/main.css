@@ -1,98 +1,55 @@
-img {
-    max-width: 100% !important;
+html,
+body {
+    margin: 0;
+    height: 100%;
 }
 
-#hero {
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.svg-border {
+    width: 26px;
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.svg-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('/images/pattern.svg');
+    background-repeat: repeat-y;
+    background-size: contain;
     background-position: center;
-    width: 100vw !important;
-    min-height: 100vh !important;
-    text-align: center !important;
 }
 
-@media only screen and (max-width:991px) {
-    #hero {
-        background-image: url('/images/hero-small.svg');
-    }
-
-    #logo {
-        width: 50%;
-    }
-
-    .global-font-size {
-        font-size: 50%;
-    }
+.svg-border.right::before {
+    transform: scaleX(-1);
+    transform-origin: center;
 }
 
-@media only screen and (min-width:992px) {
-    #hero {
-        background-image: url('/images/hero-large.svg');
-    }
-    #logo {
-        width: 20%;
-    }
-
-    .global-font-size {
-        font-size: 150%;
-    }
-}
-
-.height-100vh {
-    min-height: 100vh !important;
+#content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
 }
 
 .font-brizel-regular {
     font-family: "brizelregular", "sans-serif";
 }
 
-.font-poppins-regular {
-    font-family: "poppinsregular", "sans-serif";
-}
-
-
-
-.font-size-50 {
-    font-size: 50%;
-}
-
-.font-size-400 {
-    font-size: 400%;
-}
-
-.font-size-150 {
-    font-size: 150%;
-}
-
-.font-size-200 {
-    font-size: 200%;
-}
-
-.font-size-300 {
-    font-size: 300%;
-}
-
 body {
     font-family: "poppinsregular", "sans-serif";
-    text-decoration: none;
 }
 
-.width-100 {
-    width: 100% !important;
-}
 
-.width-50 {
-    width: 50% !important;
-}
 
-.width-20 {
-    width: 20% !important;
-}
-
-.border-red {
-    border: 1px solid red;
-
-}
 
 .button-link {
     font-family: "brizelregular", "sans-serif";
@@ -148,9 +105,38 @@ body {
     background-color: #FFFFFF;
 }
 
-.w-50 {
-    width: 50% !important;
+.min-height-100vh {
+    min-height: 100vh !important;
+
 }
-.min-width-100 {
-    width: 100px;
+
+@media only screen and (max-width: 991px) {
+
+    #content {
+        background-image: url('/images/hero-small.svg');
+    }
+
+    #logo {
+        width: 50%;
+    }
+
+    .global-font-size {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (min-width:992px) {
+
+
+    #content {
+        background-image: url('/images/hero-large.svg');
+    }
+
+    #logo {
+        width: 20%;
+    }
+
+    .global-font-size {
+        font-size: 150%;
+    }
 }
